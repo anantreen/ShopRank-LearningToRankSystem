@@ -1,0 +1,16 @@
+# Added by code-review-graph
+.code-review-graph/
+
+# Local env files
+.env
+
+# Python and ShopRank generated files
+.venv/
+.shoprank_build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+artifacts/
+data/esci/
+.DS_Store
