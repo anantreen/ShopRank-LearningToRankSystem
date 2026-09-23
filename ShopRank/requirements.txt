@@ -1,0 +1,6 @@
+# Start with requirements-core.txt. These heavier packages enable every stage.
+-r requirements-core.txt
+lightgbm>=4.0
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+

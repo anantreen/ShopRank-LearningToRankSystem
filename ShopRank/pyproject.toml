@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shoprank"
+version = "0.1.0"
+description = "A beginner-friendly, production-style e-commerce learning-to-rank project"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+core = ["numpy>=1.24", "pandas>=2.0", "scikit-learn>=1.3", "matplotlib>=3.7", "pytest>=7.4"]
+ltr = ["lightgbm>=4.0"]
+api = ["fastapi>=0.110", "uvicorn>=0.27", "httpx>=0.27"]
+semantic = ["sentence-transformers>=3.0", "faiss-cpu>=1.8"]
+all = ["shoprank[core,ltr,api,semantic]"]
+
+[tool.setuptools.packages.find]
+include = ["shoprank*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
